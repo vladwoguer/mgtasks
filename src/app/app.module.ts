@@ -18,6 +18,7 @@ import { EntityLineComponent, CreateEntityComponent, FormLineComponent,
 import { AppComponent } from './app.component';
 import { StyledListingTableComponent } from "./widgets/styled.listing.table.component";
 
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: ':entitytypename', component: ListEntitiesComponent },
