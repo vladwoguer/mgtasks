@@ -15,6 +15,9 @@ import { EntityLineComponent, CreateEntityComponent, FormLineComponent,
   EditEntityFormComponent, EditFormLineComponent, EntityDetailsComponent, 
   ShowLineComponent, ListingTableComponent } from 'angularm';
 
+  import {CustomizedListingTableComponent} from './widgets/customized.listing.table.component';
+  import {CustomizedEntityLineComponent} from './widgets/customized.table.line'
+
 import { AppComponent } from './app.component';
 
 const appRoutes: Routes = [
@@ -29,7 +32,9 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomizedListingTableComponent,
+    CustomizedEntityLineComponent
   ],
   imports: [
     CommonModule,
@@ -54,7 +59,9 @@ const appRoutes: Routes = [
     EditFormLineComponent,
     EntityDetailsComponent, 
     ShowLineComponent,
-    ListingTableComponent
+    ListingTableComponent,
+    CustomizedListingTableComponent,
+    CustomizedEntityLineComponent
   ],
   bootstrap: [AppComponent]
 })
