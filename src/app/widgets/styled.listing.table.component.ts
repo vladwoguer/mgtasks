@@ -7,21 +7,28 @@ import { AngularmService, EntityTypeComponent, FlashMessageService, Entity, Titl
 @Component({
   selector: 'div [mgListingTable]',
   template: `<div *ngIf="entityType">
-    <h1>Listing {{ entityType.plural | titleCase }}</h1>
-    <table [ngClass]="configuration.tableClass">
-      <thead>
-        <tr>
-          <th *ngFor="let propertyType of entityType.propertyTypes">{{propertyType.name | titleCase}}</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <div [mgForeachEntity]="'table_line'" [entityType]="entityType"></div>
-      </tbody>
-    </table>
+
+  <div class="w3-bar w3-large w3-theme-d4">
+  <a href="#" class="w3-bar-item w3-button">
+    <i class="fa fa-bars"></i></a>  
+  <span class="w3-bar-item">Listing {{ entityType.plural | titleCase }}</span> 
+  <a href="#" class="w3-bar-item w3-button w3-right">
+    <i class="fa fa-search"></i></a>
+</div>
+
+    <div class="w3-container w3-content">
+  <div class="w3-panel w3-white w3-card-2 w3-display-container">
+    <p [mgForeachEntity]="'table_line'" [entityType]="entityType"></p>
+
+  </div>
+</div>
+  
+ 
+       
+  
     <a href="#" (click)="create()">New {{entityType.singular | titleCase}}</a>
-    <a href="#" (click)="back()">Back</a>
-  </div>`
+    <a href="#" (click)="back()">Back</a>`
+
 })
 export class StyledListingTableComponent extends EntityTypeComponent implements OnInit {
 
