@@ -10,6 +10,8 @@ import { TableHeaderComponent } from "./widgets/table.header";
 import { TableCellComponent } from "./widgets/table.cell";
 import { CellEntityLineComponent } from "./widgets/cell.entity.line";
 import { CssListTableComponent } from "./widgets/css.list.table";
+import { CustomizedTableCellComponent } from "./widgets/customized.table.cell";
+import {CustomizedTableHeaderComponent} from "./widgets/customized.table.header";
 
 export let defineRules = (angularm: AngularmService) => {
     angularm
@@ -18,8 +20,12 @@ export let defineRules = (angularm: AngularmService) => {
         .dpr('show_line', ShowLineComponent)
         .detr('list_entities', CssListTableComponent)
         .dptr('table_header', TableHeaderComponent)
+        .ptr('table_header','*', '*','integer', CustomizedTableHeaderComponent)
+        .ptr('table_header','*', '*','date', CustomizedTableHeaderComponent)
         .der('table_line', CellEntityLineComponent)
         .dpr('table_cell', TableCellComponent)
+        .pr('table_cell','*','*','integer',CustomizedTableCellComponent)
+        .pr('table_cell','*','*','date',CustomizedTableCellComponent)
         .der('show_entity', EntityDetailsComponent)
         .detr('create_form', CreateEntityComponent)
         .der('edit_form', EditEntityFormComponent)

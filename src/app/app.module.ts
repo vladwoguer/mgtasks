@@ -17,7 +17,9 @@ import { EntityLineComponent, CreateEntityComponent, FormLineComponent,
 
 import { AppComponent } from './app.component';
 import { TableHeaderComponent } from "./widgets/table.header";
+import {CustomizedTableHeaderComponent} from "./widgets/customized.table.header";
 import { TableCellComponent } from "./widgets/table.cell";
+import { CustomizedTableCellComponent } from "./widgets/customized.table.cell";
 import { CellEntityLineComponent } from "./widgets/cell.entity.line";
 import { CssListTableComponent } from "./widgets/css.list.table";
 
@@ -37,7 +39,9 @@ const appRoutes: Routes = [
     CssListTableComponent,
     TableHeaderComponent,
     CellEntityLineComponent,
-    TableCellComponent
+    TableCellComponent,
+    CustomizedTableCellComponent,
+    CustomizedTableHeaderComponent
   ],
   imports: [
     CommonModule,
@@ -66,7 +70,9 @@ const appRoutes: Routes = [
     CssListTableComponent,
     TableHeaderComponent,
     CellEntityLineComponent,
-    TableCellComponent
+    TableCellComponent,
+    CustomizedTableCellComponent,
+    CustomizedTableHeaderComponent
   ],
   bootstrap: [AppComponent]
 })
