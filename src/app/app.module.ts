@@ -17,6 +17,10 @@ import { EntityLineComponent, CreateEntityComponent, FormLineComponent,
 
 import { AppComponent } from './app.component';
 
+import {CustomListingTableComponent} from './widgets/listing.table.component';
+import {CustomFormLineComponent} from './widgets/formline';
+import {CustomEntityLineComponent} from './widgets/entityline';
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: ':entitytypename', component: ListEntitiesComponent },
@@ -29,7 +33,10 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+       CustomListingTableComponent,
+    CustomFormLineComponent,
+    CustomEntityLineComponent
   ],
   imports: [
     CommonModule,
@@ -42,6 +49,7 @@ const appRoutes: Routes = [
     AngularmModule,
     PipesModule,
     MetaModule
+ 
   ],
   providers: [
     FlashMessageService
@@ -54,7 +62,10 @@ const appRoutes: Routes = [
     EditFormLineComponent,
     EntityDetailsComponent, 
     ShowLineComponent,
-    ListingTableComponent
+    ListingTableComponent,
+    CustomListingTableComponent,
+    CustomFormLineComponent,
+    CustomEntityLineComponent
   ],
   bootstrap: [AppComponent]
 })
